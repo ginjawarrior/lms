@@ -1,56 +1,26 @@
-<style>
-  /* global style codes */
-  #spad {background: none; border: none; padding: 0px;}
-  #skey {background: white; border: 1px solid white; color: black;}
-  #skeyb {background: white; border: 1px solid black; color: black;}
-  #spast {background: purple; border: 1px solid white;}
-  #scurr {background: grey; border: 1px solid white;}
-  #sfut {background: black; border: 1px solid white;}
-  #sthru {background: blue; border: 1px solid white;}
-  #sout {background: red; border: 1px solid white;}
-  #smid {background: magenta; border: 1px solid white;}
-  #sblnk {background: none; border: 0px solid white;}
-  #swin {background: darkorange; border: 1px solid white; color: black; font-weight: 700;}
-  /* add this after last player so that table is high enough to be scrolable */
-  #slast {background: none; border: none; height: 300;}
-  /* all rows and columns */
-    /* no need to set min-height */
-    /* set min-width to 100 + 50 * weeks to display */
-    /* set future 5 weeks at a time */
-  table {border-spacing: 0px; color: white; font-family: "Trebuchet MS", sans-serif; font-size: 14px; margin: 0; min-width: 300px; white-space: nowrap;}
-  /* row 1 */
-  table thead th {border: 1px solid white; border-radius: 0px 0px 10px 10px; min-width: 50px; position: sticky; padding: 2px 0px; text-align: center; top: 0; z-index: 1;}
-  /* row 1 column 1 */
-  table thead th:nth-child(1) {border: 1px solid white; border-radius: 0px 0px 10px 0px; left: 0; min-width: 75px; padding: 2px 0px 2px 5px; position: sticky; text-align: left; z-index: 2;}
-  /* row 2 onwards column 1 */
-  table tbody th {border: 1px solid white; border-radius: 0px 10px 10px 0px; left: 0; padding: 2px 0px 2px 5px; position: sticky; text-align: left; z-index: 1;}
-  /* row 2 onwards column 2 */
-  table tbody td {border-radius:10px; padding: 2px 0px; text-align: center;}
-</style>
-<div>
-  <table>
-    <thead>
- <tr> <th id="skey">Week > </th> <th id="scurr">1</th> <th id="sfut">2</th> <th id="sfut">3</th> <th id="sfut">4</th> <th id="sfut">5</th> </tr>
-    </thead>
-    <tbody>
- <tr> <th id="sthru">Bryan K</th> <td id="scurr">JAX</td> </tr>
- <tr> <th id="sthru">Shug</th> <td id="scurr">LAC</td> </tr>
- <tr> <th id="sthru">Jordan</th> <td id="scurr">DET</td> </tr>
- <tr> <th id="sthru">John</th> <td id="scurr">JAX</td> </tr>
- <tr> <th id="sthru">Alan</th> <td id="scurr">BUF</td> </tr>
- <tr> <th id="sthru">Player6</th> <td id="scurr">-</td> </tr>
- <tr> <th id="sthru">Player7</th> <td id="scurr">-</td> </tr>
- <tr> <th id="sthru">Player8</th> <td id="scurr">-</td> </tr>
- <tr> <th id="sthru">Player9</th> <td id="scurr">-</td> </tr>
- <tr> <th id="sthru">Player10</th> <td id="scurr">-</td> </tr>
- <tr> <th id="sthru">Player11</th> <td id="scurr">-</td> </tr>
- <tr> <th id="sthru">Player12</th> <td id="scurr">-</td> </tr>
- <tr> <th id="sthru">Player13</th> <td id="scurr">-</td> </tr>
- <tr> <th id="sthru">Player14</th> <td id="scurr">-</td> </tr>
- <tr> <th id="sthru">Player15</th> <td id="scurr">-</td> </tr>
- <tr> <th id="sblnk"></th> </tr>
- <tr> <th id="sblnk"></th> </tr>
- <tr> <th id="slast"></th> </tr>
-    </tbody>
-  </table>
-</div>
+<link rel="stylesheet" href="style.css">
+<table>
+ <thead>
+  <tr> <th id="skey">Week > </th> <th id="scurr">1</th> <th id="sfut">2</th> <th id="sfut">3</th> <th id="sfut">4</th> <th id="sfut">5</th> </tr>
+ </thead>
+ <tbody>
+  <tr> <th id="sthru">Bryan K</th> <td id="scurr">JAX</td> </tr>
+  <tr> <th id="sthru">Shug</th> <td id="scurr">LAC</td> </tr>
+  <tr> <th id="sthru">Jordan</th> <td id="scurr">DET</td> </tr>
+  <tr> <th id="sthru">John</th> <td id="scurr">JAX</td> </tr>
+  <tr> <th id="sthru">Alan</th> <td id="scurr">WIN</td> </tr>
+  <tr> <th id="sthru">Player6</th> <td id="scurr">-</td> </tr>
+  <tr> <th id="sthru">Player7</th> <td id="scurr">-</td> </tr>
+  <tr> <th id="sthru">Player8</th> <td id="scurr">-</td> </tr>
+  <tr> <th id="sthru">Player9</th> <td id="scurr">-</td> </tr>
+  <tr> <th id="sthru">Player10</th> <td id="scurr">-</td> </tr>
+  <tr> <th id="sthru">Player11</th> <td id="scurr">-</td> </tr>
+  <tr> <th id="sthru">Player12</th> <td id="scurr">-</td> </tr>
+  <tr> <th id="sthru">Player13</th> <td id="scurr">-</td> </tr>
+  <tr> <th id="sthru">Player14</th> <td id="scurr">-</td> </tr>
+  <tr> <th id="sthru">Player15</th> <td id="scurr">-</td> </tr>
+  <tr> <th id="sblnk"></th> </tr>
+  <tr> <th id="sblnk"></th> </tr>
+  <tr> <th id="slast"></th> </tr>
+ </tbody>
+</table>

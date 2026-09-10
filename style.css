@@ -19,9 +19,9 @@
     /* set future 5 weeks at a time */
   table {border-spacing: 0px; color: white; font-family: "Trebuchet MS", sans-serif; font-size: 14px; margin: 0; min-width: 300px; white-space: nowrap;}
   /* row 1 */
-  table thead th {border: 1px solid white; border-radius: 0px 0px 10px 10px; min-width: 50px; position: sticky; padding: 2px 0px; text-align: center; top: 0; z-index: 1;}
+  table thead th {border: 1px solid white; border-radius: 0px 0px 10px 10px; min-width: 65px; position: sticky; padding: 2px 0px; text-align: center; top: 0; z-index: 1;}
   /* row 1 column 1 */
-  table thead th:nth-child(1) {border: 1px solid white; border-radius: 0px 0px 10px 0px; left: 0; min-width: 75px; padding: 2px 0px 2px 5px; position: sticky; text-align: left; z-index: 2;}
+  table thead th:nth-child(1) {border: 1px solid white; border-radius: 0px 0px 10px 0px; left: 0; min-width: 95px; padding: 2px 0px 2px 5px; position: sticky; text-align: left; z-index: 2;}
   /* row 2 onwards column 1 */
   table tbody th {border: 1px solid white; border-radius: 0px 10px 10px 0px; left: 0; padding: 2px 0px 2px 5px; position: sticky; text-align: left; z-index: 1;}
   /* row 2 onwards column 2 */

@@ -1,0 +1,58 @@
+<style>
+/* global style codes */
+  #spad {background: none; border: none; padding: 0px;}
+  #skey {background: white; border: 1px solid white; color: black;}
+  #skeyb {background: white; border: 1px solid black; color: black;}
+  #spast {background: purple; border: 1px solid white;}
+ #scurr {background: grey; border: 1px solid white;}
+ #sfut {background: black; border: 1px solid white;}
+ #sthru {background: blue; border: 1px solid white;}
+ #sout {background: red; border: 1px solid white;}
+ #smid {background: magenta; border: 1px solid white;}
+ #sblnk {background: none; border: 0px solid white;}
+ #swin {background: darkorange; border: 1px solid white; color: black; font-weight: 700;}
+ /* add this after last player so that table is high enough to be scrolable */
+ #slast {background: none; border: none; height: 300;}
+ /* all rows and columns */
+  /* no need to set min-height */
+  /* set min-width to 100 + 50 * weeks to display */
+  /* set future 5 weeks at a time */
+ table {border-spacing: 0px; color: white; font-family: "Trebuchet MS", sans-serif; font-size: 14px; margin: 0; min-width: 300px; white-space: nowrap;}
+ /* row 1 */
+ table thead th {border: 1px solid white; border-radius: 0px 0px 10px 10px; min-width: 65px; position: sticky; padding: 2px 0px; text-align: center; top: 0; z-index: 1;}
+ /* row 1 column 1 */
+ table thead th:nth-child(1) {border: 1px solid white; border-radius: 0px 0px 10px 0px; left: 0; min-width: 95px; padding: 2px 0px 2px 5px; position: sticky; text-align: left; z-index: 2;}
+ /* row 2 onwards column 1 */
+ table tbody th {border: 1px solid white; border-radius: 0px 10px 10px 0px; left: 0; padding: 2px 0px 2px 5px; position: sticky; text-align: left; z-index: 1;}
+ /* row 2 onwards column 2 */
+ table tbody td {border-radius:10px; padding: 2px 0px; text-align: center;}
+</style>
+<table>
+ <thead>
+  <tr> <th id="skeyb">Rank</th> <th id="skeyb">Success</th> <th id="skeyb">Correct</th> <th id="skeyb">Champ</th> <th id="skeyb">Phases</th> <th id="skeyb">Weeks</th> </tr>
+ </thead>
+ <tbody>
+  <tr> <th id="sout">01. Shaun</th> <td id="sfut">.938</td> <td id="sthru">15</td> <td id="swin">1</td> <td id="spast">2</td> <td id="scurr">16</td> </tr>
+  <tr> <th id="sout">02. Bryan K</th> <td id="sfut">.875</td> <td id="sthru">42</td> <td id="swin">2</td> <td id="spast">8</td> <td id="scurr">48</td> </tr>
+  <tr> <th id="sout">03. Ricky</th> <td id="sfut">.875</td> <td id="sthru">7</td> <td id="swin">1</td> <td id="spast">2</td> <td id="scurr">8</td> </tr>
+  <tr> <th id="sout">04. Alan</th> <td id="sfut">.846</td> <td id="sthru">33</td> <td id="swin">2</td> <td id="spast">8</td> <td id="scurr">39</td> </tr>
+  <tr> <th id="sout">05. Martin</th> <td id="sfut">.842</td> <td id="sthru">32</td> <td id="swin">2</td> <td id="spast">8</td> <td id="scurr">38</td> </tr>
+  <tr> <th id="sout">06. Bryan L</th> <td id="sfut">.828</td> <td id="sthru">24</td> <td id="swin">1</td> <td id="spast">6</td> <td id="scurr">29</td> </tr>
+  <tr> <th id="sout">07. Greg</th> <td id="sfut">.714</td> <td id="sthru">10</td> <td id="swin">0</td> <td id="spast">4</td> <td id="scurr">14</td> </tr>
+  <tr> <th id="sout">08. Kev</th> <td id="sfut">.714</td> <td id="sthru">10</td> <td id="swin">0</td> <td id="spast">4</td> <td id="scurr">14</td> </tr>
+  <tr> <th id="sout">09. Jordan</th> <td id="sfut">.708</td> <td id="sthru">17</td> <td id="swin">0</td> <td id="spast">7</td> <td id="scurr">24</td> </tr>
+  <tr> <th id="sout">10. Gary</th> <td id="sfut">.667</td> <td id="sthru">6</td> <td id="swin">0</td> <td id="spast">3</td> <td id="scurr">9</td> </tr>
+  <tr> <th id="sout">11. John</th> <td id="sfut">.600</td> <td id="sthru">12</td> <td id="swin">0</td> <td id="spast">8</td> <td id="scurr">20</td> </tr>
+  <tr> <th id="sout">12. Liam</th> <td id="sfut">.588</td> <td id="sthru">10</td> <td id="swin">0</td> <td id="spast">7</td> <td id="scurr">17</td> </tr>
+  <tr> <th id="sout">13. Shunter</th> <td id="sfut">.571</td> <td id="sthru">4</td> <td id="swin">0</td> <td id="spast">3</td> <td id="scurr">7</td> </tr>
+  <tr> <th id="sout">14. Shug</th> <td id="sfut">.500</td> <td id="sthru">7</td> <td id="swin">0</td> <td id="spast">7</td> <td id="scurr">14</td> </tr>
+  <tr> <th id="sout">15. Russell</th> <td id="sfut">.333</td> <td id="sthru">1</td> <td id="swin">0</td> <td id="spast">2</td> <td id="scurr">3</td> </tr>
+  <tr> <th id="sblnk"></th> </tr>
+  <tr> <th id="sblnk"></th> </tr>
+  <tr> <th id="sblnk"></th> </tr>
+  <tr> <th id="sblnk"></th> </tr>
+  <tr> <th id="sblnk"></th> </tr>
+  <tr> <th id="slast"></th> </tr>
+ </tbody>
+</table>
+<div style="margin-top:20px;font-size:12px;color:#666;">Last updated: 20260912 151510</div>

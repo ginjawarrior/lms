@@ -9,7 +9,7 @@
 <div id="content">Loading…</div>
 
 <script>
-fetch("standings_current.json?v=" + Date.now())
+fetch("standings_halloffame.json?v=" + Date.now())
   .then(r => r.json())
   .then(data => {
     const style = document.createElement("style");

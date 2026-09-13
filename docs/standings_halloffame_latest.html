@@ -1,13 +1,32 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-<script>
-  const ts = Date.now();
-  window.location.replace("standings_halloffame_20260913_022003.html?cb=" + ts);
-</script>
+<meta charset="UTF-8">
+<title>Current Standings</title>
 </head>
 <body>
-Redirecting to latest version...
+
+<div id="content">Loading…</div>
+
+<script>
+fetch("standings_current.json?v=" + Date.now())
+  .then(r => r.json())
+  .then(data => {
+    const style = document.createElement("style");
+    style.textContent = data.css;
+    document.head.appendChild(style);
+
+    document.getElementById("content").innerHTML =
+      data.html +
+      `<div style="margin-top:20px;font-size:12px;color:#666;">
+         Last updated: ${data.updated}
+       </div>`;
+  })
+  .catch(err => {
+    document.getElementById("content").innerHTML =
+      "Error loading data.";
+  });
+</script>
+
 </body>
 </html>

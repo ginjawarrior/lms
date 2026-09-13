@@ -2,29 +2,43 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Current Standings</title>
+<title>Hall of Fame</title>
 </head>
 <body>
 
 <div id="content">Loading…</div>
 
 <script>
+// Fetch JSON data (cache-busted)
 fetch("standings_halloffame.json?v=" + Date.now())
   .then(r => r.json())
   .then(data => {
+
+    // Inject CSS from JSON
     const style = document.createElement("style");
     style.textContent = data.css;
     document.head.appendChild(style);
 
+    // Format timestamp: YYYY-MM-DD HH:MM:SS
+    const updatedDate = new Date(data.updated);
+    const formatted =
+      updatedDate.getFullYear() + "-" +
+      String(updatedDate.getMonth() + 1).padStart(2, "0") + "-" +
+      String(updatedDate.getDate()).padStart(2, "0") + " " +
+      String(updatedDate.getHours()).padStart(2, "0") + ":" +
+      String(updatedDate.getMinutes()).padStart(2, "0") + ":" +
+      String(updatedDate.getSeconds()).padStart(2, "0");
+
+    // Insert HTML + timestamp
     document.getElementById("content").innerHTML =
       data.html +
       `<div style="margin-top:20px;font-size:12px;color:#666;">
-         Last updated: ${data.updated}
+         Last updated: ${formatted}
        </div>`;
   })
   .catch(err => {
     document.getElementById("content").innerHTML =
-      "Error loading data.";
+      "<div style='color:red;'>Error loading data.</div>";
   });
 </script>
 
